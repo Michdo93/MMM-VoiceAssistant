@@ -1,4 +1,6 @@
 # MMM-VoiceAssistant
+**This is a fork for Ubuntu on x86. Forget your old Raspberry Pi and run it on a more powerful computer!**
+
 
 Voice Assistant module for your Magic Mirror.
 
@@ -16,13 +18,13 @@ It also shows up parsed user speech that is sent to Google Assistant.
 
 ## Installation
 
-This module uses a pubsub model to communicate with google assistant running on Pi.
+This module uses a pubsub model to communicate with google assistant running on Ubuntu (x86).
 
 ### Create an app in pubnub admin console
 Signup for a free dev account here https://admin.pubnub.com/#/register and create an app and get publish and subscriber keys to configure it in following files and `config.js`.
 
 Replace keys in following files
-* pi/assistant.py
+* ubuntu/assistant.py
 
 ### Setup GA Module
 * `git clone https://github.com/gauravsacc/MMM-GoogleAssistant.git` into the `~/MagicMirror/modules` directory.
@@ -31,12 +33,12 @@ Replace keys in following files
 Register your GA device using the register-tool available here and replace the magic-mirror-device-id in the assistant.py with your unique device id
 https://developers.google.com/assistant/sdk/reference/device-registration/device-tool
 
-### Setup Google Assistant on Pi
-* Setup your raspberry pi and run the sample to verify if your google assistant is working https://developers.google.com/assistant/sdk/prototype/getting-started-pi-python/run-sample
-* If you are able to launch google-assistant-demo(see link above) and use the assistant, you should able to use the 'pi/assistant.py' script that communicates with the magic mirror module.
+### Setup Google Assistant on Ubuntu (x86)
+* Setup your Ubuntu and run the sample to verify if your google assistant is working https://developers.google.com/assistant/sdk/guides/library/python
+* If you are able to launch google-assistant-demo(see link above) and use the assistant, you should able to use the 'ubuntu/assistant.py' script that communicates with the magic mirror module.
 * Install Pubnub dependencies using pip install 'pubnub>=4.0.13'
-* Download the 'pi/assistant.py' script on your raspberry pi and launch it via terminal
-* If you see a 'No module named google' error try running it via /home/pi/env/bin/python3 -u assistant.py
+* Download the 'ubuntu/assistant.py' script on your Ubuntu and launch it via terminal
+* If you see a 'No module named google' error try running it via /home/ubuntu/env/bin/python3 -u assistant.py
 
 
 ## Add to Config.js
